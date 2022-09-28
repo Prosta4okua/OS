@@ -1,3 +1,7 @@
+# My own ignoring files
+*.swp
+*.save
+
 # Prerequisites
 *.d
 
