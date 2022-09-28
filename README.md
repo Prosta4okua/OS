@@ -7,4 +7,4 @@
 </hr>
 <b>Список домашніх робіт:</b>
 <ul>
-	<li><a href="https://github.com/Prosta4okua/OS/tree/hw1">Домашня робота №1</a></li>
+	<li><a href="https://github.com/Prosta4okua/OS/tree/HW1">Домашня робота №1</a></li>
