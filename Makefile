@@ -1,3 +1,5 @@
+CXXFLAGS = -std=c++11
+
 all: compilation run clean
 
 compilation: main.c
@@ -7,6 +9,7 @@ compilation: main.c
 
 run: main
 	@echo "\n~~~~~\nStage 2. Running the program...\n"
+	@clear
 	@./main
 	@echo "\nThe program has been executed. End of stage 2\n~~~~~\n"
 
