@@ -1,6 +1,7 @@
 all: compilation run clean
 
 compilation: main.c
+	@echo "\n---\nThat's the second version of my task with functions in different .h files\n---\n"
 	@echo "\n~~~~~\nStage 1. Compiling main.c to main...\n"
 	@cc main.c -o main -lm
 	@echo "End of stage 1\n~~~~~\n"
