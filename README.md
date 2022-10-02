@@ -9,3 +9,4 @@
 <b>Список домашніх робіт:</b>
 <ul>
 	<li><a href="https://github.com/Prosta4okua/OS/tree/HW1">Домашня робота №1</a></li>
+	<li><a href="https://github.com/Prosta4okua/OS/tree/HW2">Домашня робота №2</a></li>
