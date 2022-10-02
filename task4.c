@@ -27,11 +27,15 @@ void print();
 int enter_int(char* msg);
 int check();
 
+void debug();
+
 int main(){
 	int item, index;
 	int menubar;
 
 	init();
+
+	debug();
 
 
 	printf("Welcome to Danylo Sydorenko's ArrayList implementation in C!\n\n\n");
@@ -83,13 +87,14 @@ int main(){
 				index = enter_int("\nEnter the index of element which you want to get: ");
 				get(index);
 				break;		
+		/*
 			case 7:
 				if (check() == 0) {
 					printf(ADD_ELEM);
 					continue;
 				}
 				print();
-				break;
+				break;*/
 			default:
 				printf("This operation doesn't exist. Try again!\n");
 				continue;
@@ -98,14 +103,18 @@ int main(){
 }
 
 void print_menu() {
-	printf("\n~~~~~\nAvailable operations:\n\n");
+	printf("\n\n\n~~~~~\n");
+	if (check() != 0) {
+		print();
+	}
+	printf("\nAvailable operations:\n\n");
 	printf("1. Add new item\n");
 	printf("2. Insert new item at specific index\n");
 	printf("3. ArrayList's size\n");
 	printf("4. Remove specific item\n");
 	printf("5. Change specific item\n");
 	printf("6. Get specific item\n");
-	printf("7. Print items\n");
+//	printf("7. Print items\n");
 	printf("0. Exit\n");
 	printf("\nEnter the number:\t");
 }
@@ -145,10 +154,10 @@ void add(int item) {
 		else {
 			list.size++;
 		}
-
+		
 		// reallocating memory
 		list.array = (int* ) realloc(list.array, list.size * sizeof(int));
-		if (list.array = NULL) {
+		if (list.array == NULL) {
 			printf(MEMORY_ALLOCATION_ERROR);
 			return;
 		}
@@ -183,7 +192,7 @@ void remove_value(int index) {
 
 	// reallocating memory
 	list.array = realloc(list.array, list.size * sizeof(int));
-	if (list.array = NULL) {
+	if (list.array == NULL) {
 		printf(MEMORY_ALLOCATION_ERROR);
 		return;
 	}
@@ -216,18 +225,20 @@ void insert(int index, int item) {
 
 	// reallocating memory
 	list.array = (int* ) realloc(list.array, list.size * sizeof(int));
-	if (list.array = NULL) {
+	if (list.array == NULL) {
 		printf(MEMORY_ALLOCATION_ERROR);
 		return;
 	}
 
 	// shift elements
-	for (int i = index; i < list.size - 1; i++) {
+	for (int i = list.size - 1; i >= index; i--) {
 		list.array[i + 1] = list.array[i];
 	}
 
 	// inserting the item
 	list.array[index] = item;
+
+	printf("The item %d was inserted at position %d", item, index);
 }
 
 void size() {
@@ -283,3 +294,16 @@ int  check() {
 	else
 		return 0;
 }
+
+void debug() {
+	add(1);
+	add(22);
+	add(33);
+	add(44);
+	add(5);
+	add(66);
+	add(7);
+	size();
+	print();
+}
+
