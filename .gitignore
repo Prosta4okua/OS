@@ -58,3 +58,7 @@ dkms.conf
 # My exec files
 hehe
 main
+
+
+.idea/
+*txt
