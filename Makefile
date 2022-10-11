@@ -1,6 +1,6 @@
-all: compile_task0 run_task0 clean_task0
+# all: compile_task0 run_task0 clean_task0
 
-task4: compile_task4 run_task4 clean_task4
+all: compile_task4 run_task4 clean_task4
 
 compile_task4: task4.c
 	@echo "\n~~~~~\nCompiling task4...\n"

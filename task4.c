@@ -95,6 +95,8 @@ int main(){
 				}
 				print();
 				break;*/
+			case 0:
+				exit(0);
 			default:
 				printf("This operation doesn't exist. Try again!\n");
 				continue;
