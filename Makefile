@@ -7,7 +7,7 @@ compilation: main.c
 
 run: main
 	@echo "\n~~~~~\nStage 2. Running the program...\n"
-	@./main
+	@./main $a $b $c
 	@echo "\nThe program has been executed. End of stage 2\n~~~~~\n"
 
 clean:
