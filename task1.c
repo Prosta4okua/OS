@@ -17,7 +17,7 @@ int str_to_double(char buf[], double *a);
 void print_error(char* );
 void check_err(int );
 
-int main(int argc, char** argv) 
+int main(int argc, char** argv)
 {
 	int err;
 	double a, b, c;
@@ -27,7 +27,7 @@ int main(int argc, char** argv)
 	check_err(str_to_double(argv[3], &c));
 
 	printf("Your equation: \n");
-	printf("%.2lf*x^2 + %.2lf*x + %.2lf = 0\n\n", a, b, c);	
+	printf("%.2lf*x^2 + %.2lf*x + %.2lf = 0\n\n", a, b, c);
 	find_solutions(a, b, c);
 
 
@@ -38,28 +38,28 @@ int main(int argc, char** argv)
 }
 
 void enter_nums(void )
-{	
+{
 
 	printf("Find equation:\n");
 	printf("a*x^2 + b * x + 4 * c\n");
 
 	// reading safely double values
-	double a = read_double("\nEnter a:\n> "); 
+	double a = read_double("\nEnter a:\n> ");
 	double b = read_double("\nEnter b:\n> ");
 	double c = read_double("\nEnter c:\n> ");
 
 	find_solutions(a, b, c);
 }
 
-void find_solutions(double a, double b, double c) 
+void find_solutions(double a, double b, double c)
 {
 
 	double sol1, sol2;
 	double real, imag;
-	
+
 	// calculating  discriminant
 	double discriminant = b * b - 4 * a * c;
-	
+
 	printf("\nThe roots of your equation:\n");
 	if (discriminant < 0)
 	{
@@ -67,7 +67,7 @@ void find_solutions(double a, double b, double c)
 	        imag = sqrt(-discriminant) / (2 * a);
 		 printf("Solution1 = %.2lf+%.2lfi. Solution2 = %.2f-%.2fi.", real, imag, real, imag);
 	}
-	else if (discriminant == 0) 
+	else if (discriminant == 0)
 	{
 		sol1 = sol2 = -b / (2 * a);
 		printf("The only one solution is %.2lf.", sol1);
@@ -81,7 +81,7 @@ void find_solutions(double a, double b, double c)
 	printf("\n");
 }
 
-double read_double(char* msg) 
+double read_double(char* msg)
 {
 	char buf[1024];
 	double a;
@@ -90,7 +90,7 @@ double read_double(char* msg)
 	{
 		printf("%s", msg);
 
-		if (!fgets(buf, 1024, stdin)) 
+		if (!fgets(buf, 1024, stdin))
 		{
 			print_error("Reading input failed.");
 			continue;
@@ -125,7 +125,7 @@ int str_to_double(char buf[], double *a) {
 		success = 1;
 	} while (success == 0);
 
-	return 0;	
+	return 0;
 }
 
 void check_err(int err) {
