@@ -2,7 +2,7 @@
 
 all: compile_task4 run_task4 clean_task4
 
-compile_task4: task4.c
+compile_task4: task5.c
 	@echo "\n~~~~~\nCompiling task4...\n"
 	@cc task4.c -o task4 -lm
 
