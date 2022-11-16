@@ -1,19 +1,27 @@
 #include <stdlib.h>
 #include <getopt.h>
 #include <stdio.h>
-#include <sys/types.h>
 
+#include <sys/types.h>
 extern char *optarg;
+
 extern int optind, opterr, optopt;
+
+// завдання просто на вивід того, що робити та чи інша команда
+// компіляція: `gcc task1.c -o hehe
+// використання: ./hehe -acd або ./hehe -a -c -d
+
 
 int main(int argc, char *argv[]) {
 
     int opt;
+    // якщо без аргументів (перший аргумент - `./a.out`
     if (argc == 1) {
         help();
         return 0;
     }
 
+    // в getopt забираємо аргументи і записуємо в opt, поки не буде прочитаний кожен
     while ((opt = getopt(argc, argv, "abcdefg")) != -1) {
         switch (opt) {
             case 'a':
@@ -41,6 +49,8 @@ int main(int argc, char *argv[]) {
     }
 }
 
+
+// просто схоже на лінуксовий хелп
 void help() {
     printf("NAME\n"
            "       main - a program that outputs in a standard flow of process output\n\n"
@@ -55,7 +65,7 @@ void help() {
            "       -f prints current process GID\n\n"
            "       -g prints eGID\n\n"
            "AUTHOR\n"
-           "       Written by a very good person from CS.\n\n"
+           "       Written by Sydorenko Danylo from CS34.\n\n"
            "COPYRIGHT\n"
            "       Copyright  ©  2018  Free Foundation, Inc.  License\n"
            "       GPLv3+: GNU  GPL  version  3  or  later  <https://gnu.org/li‐\n"
