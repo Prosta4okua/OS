@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeLite_Workspace Name="Lesson9Tasks" Database="./Lesson9Tasks.tags">
+  <Project Name="Intergal" Path="Intergal/Intergal.project" Active="No"/>
+  <Project Name="Race" Path="Race/Race.project" Active="No"/>
+  <Project Name="Race1" Path="Race1/Race1.project" Active="No"/>
+  <Project Name="RWTest" Path="RWTest/RWTest.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Project Name="Intergal" ConfigName="Debug"/>
+      <Project Name="Race" ConfigName="Debug"/>
+      <Project Name="Race1" ConfigName="Debug"/>
+      <Project Name="RWTest" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="Intergal" ConfigName="Release"/>
+      <Project Name="Race" ConfigName="Release"/>
+      <Project Name="Race1" ConfigName="Release"/>
+      <Project Name="RWTest" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>

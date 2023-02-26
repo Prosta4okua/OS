@@ -1,0 +1,4 @@
+SELECT point.adr, outcome.valuta, Sum(outcome.[out])
+FROM point INNER JOIN outcome ON point.id_p = outcome.id_p
+WHERE (((outcome.data) Between [Forms]![ГОЛОВНА ФОРМА]![M2PW4_Q1_DATASTART] And [Forms]![ГОЛОВНА ФОРМА]![M2PW4_Q1_DATAEND]))
+GROUP BY point.adr, outcome.valuta;
